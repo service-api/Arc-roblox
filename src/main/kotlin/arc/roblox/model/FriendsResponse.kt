@@ -1,4 +1,4 @@
-package dev.zorinov.roblox.model
+package arc.roblox.model
 
 data class FriendsResponse(
     val data: List<FriendData>

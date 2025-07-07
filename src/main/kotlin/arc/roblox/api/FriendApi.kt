@@ -1,6 +1,6 @@
-package dev.zorinov.roblox.api
+package arc.roblox.api
 
-import dev.zorinov.roblox.model.FriendsResponse
+import arc.roblox.model.FriendsResponse
 import retrofit2.Call
 import retrofit2.http.*
 

@@ -1,7 +1,7 @@
-package dev.zorinov.roblox.cookie
+package arc.roblox.cookie
 
-import dev.zorinov.roblox.cookie.impl.InMemoryCookieStorage
-import dev.zorinov.roblox.cookie.impl.RobloxSecurityCookieProvider
+import arc.roblox.cookie.impl.InMemoryCookieStorage
+import arc.roblox.cookie.impl.RobloxSecurityCookieProvider
 import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
@@ -23,7 +23,9 @@ class RobloxCookieJar(
         fun create(robloxSecurity: String): RobloxCookieJar {
             return RobloxCookieJar(
                 cookieStorage = InMemoryCookieStorage(),
-                securityCookieProvider = RobloxSecurityCookieProvider(robloxSecurity)
+                securityCookieProvider = RobloxSecurityCookieProvider(
+                    robloxSecurity
+                )
             )
         }
     }

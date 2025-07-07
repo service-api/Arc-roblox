@@ -1,4 +1,4 @@
-package dev.zorinov.roblox.interceptor
+package arc.roblox.interceptor
 
 import okhttp3.Interceptor
 import okhttp3.Response

@@ -1,6 +1,6 @@
-package dev.zorinov.roblox.cookie.impl
+package arc.roblox.cookie.impl
 
-import dev.zorinov.roblox.cookie.CookieStorage
+import arc.roblox.cookie.CookieStorage
 import okhttp3.Cookie
 import okhttp3.HttpUrl
 

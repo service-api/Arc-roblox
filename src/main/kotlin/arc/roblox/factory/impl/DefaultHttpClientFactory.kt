@@ -1,9 +1,9 @@
-package dev.zorinov.roblox.factory.impl
+package arc.roblox.factory.impl
 
-import dev.zorinov.roblox.cookie.RobloxCookieJar
-import dev.zorinov.roblox.factory.HttpClientFactory
-import dev.zorinov.roblox.interceptor.CsrfTokenInterceptor
-import dev.zorinov.roblox.interceptor.impl.RobloxCsrfTokenProvider
+import arc.roblox.cookie.RobloxCookieJar
+import arc.roblox.factory.HttpClientFactory
+import arc.roblox.interceptor.CsrfTokenInterceptor
+import arc.roblox.interceptor.impl.RobloxCsrfTokenProvider
 import okhttp3.OkHttpClient
 
 class DefaultHttpClientFactory(
@@ -17,7 +17,9 @@ class DefaultHttpClientFactory(
             .cookieJar(cookieJar)
             .build()
 
-        val csrfTokenInterceptor = CsrfTokenInterceptor(RobloxCsrfTokenProvider(tokenClient))
+        val csrfTokenInterceptor = CsrfTokenInterceptor(
+            RobloxCsrfTokenProvider(tokenClient)
+        )
 
         return tokenClient.newBuilder()
             .cookieJar(cookieJar)

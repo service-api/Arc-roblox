@@ -1,4 +1,4 @@
-package dev.zorinov.roblox.cookie
+package arc.roblox.cookie
 
 import okhttp3.Cookie
 

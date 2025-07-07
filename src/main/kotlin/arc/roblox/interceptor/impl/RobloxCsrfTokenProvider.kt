@@ -1,6 +1,6 @@
-package dev.zorinov.roblox.interceptor.impl
+package arc.roblox.interceptor.impl
 
-import dev.zorinov.roblox.interceptor.CsrfTokenProvider
+import arc.roblox.interceptor.CsrfTokenProvider
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody

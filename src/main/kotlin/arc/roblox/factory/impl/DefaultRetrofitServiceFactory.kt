@@ -1,6 +1,6 @@
-package dev.zorinov.roblox.factory.impl
+package arc.roblox.factory.impl
 
-import dev.zorinov.roblox.factory.RetrofitServiceFactory
+import arc.roblox.factory.RetrofitServiceFactory
 import okhttp3.OkHttpClient
 import retrofit2.Converter
 import retrofit2.Retrofit

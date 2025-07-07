@@ -1,6 +1,6 @@
-package dev.zorinov.roblox.api
+package arc.roblox.api
 
-import dev.zorinov.roblox.model.RobloxUser
+import arc.roblox.model.RobloxUser
 import retrofit2.Call
 import retrofit2.http.GET
 

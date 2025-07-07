@@ -1,6 +1,6 @@
-package dev.zorinov.roblox.cookie.impl
+package arc.roblox.cookie.impl
 
-import dev.zorinov.roblox.cookie.SecurityCookieProvider
+import arc.roblox.cookie.SecurityCookieProvider
 import okhttp3.Cookie
 
 class RobloxSecurityCookieProvider(

@@ -1,4 +1,4 @@
-package dev.zorinov.roblox.interceptor
+package arc.roblox.interceptor
 
 interface CsrfTokenProvider {
     fun getToken(): String

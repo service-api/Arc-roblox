@@ -1,14 +1,13 @@
+package arc.roblox
 
-package dev.zorinov.roblox
-
-import dev.zorinov.roblox.api.FriendApi
-import dev.zorinov.roblox.api.UserApi
-import dev.zorinov.roblox.factory.HttpClientFactory
-import dev.zorinov.roblox.factory.RetrofitServiceFactory
-import dev.zorinov.roblox.factory.impl.DefaultHttpClientFactory
-import dev.zorinov.roblox.factory.impl.DefaultRetrofitServiceFactory
-import dev.zorinov.roblox.model.FriendsResponse
-import dev.zorinov.roblox.model.RobloxUser
+import arc.roblox.api.FriendApi
+import arc.roblox.api.UserApi
+import arc.roblox.factory.HttpClientFactory
+import arc.roblox.factory.RetrofitServiceFactory
+import arc.roblox.factory.impl.DefaultHttpClientFactory
+import arc.roblox.factory.impl.DefaultRetrofitServiceFactory
+import arc.roblox.model.FriendsResponse
+import arc.roblox.model.RobloxUser
 
 class RobloxClient(
     val userApi: UserApi,
@@ -21,7 +20,9 @@ class RobloxClient(
     }
 
     fun getUserFriends(userId: Long): FriendsResponse {
-        return friendApi.getUserFriends(userId).execute().body() ?: FriendsResponse(emptyList())
+        return friendApi.getUserFriends(userId).execute().body() ?: FriendsResponse(
+            emptyList()
+        )
     }
 
     fun requestFriendship(userId: Long): Boolean {
@@ -41,7 +42,9 @@ class RobloxClient(
         }
 
         fun build(): RobloxClient {
-            val clientFactory = httpClientFactory ?: DefaultHttpClientFactory(robloxSecurity)
+            val clientFactory = httpClientFactory ?: DefaultHttpClientFactory(
+                robloxSecurity
+            )
             val serviceFactory = retrofitServiceFactory ?: DefaultRetrofitServiceFactory.builder().build()
 
             val httpClient = clientFactory.createClient()
